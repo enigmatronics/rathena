@@ -305,8 +305,7 @@ function	script	F_KafTele	{
 			mes "to " + @wrpD$[.@j] + " is " + @wrpP[.@j] + " zeny.";
 			close3;
 		}
-		if {(@wrpD$[.@j] == "Al De Baran") Zeny -= 0;}	
-		else {Zeny -= @wrpP[.@j];}
+		Zeny -= @wrpP[.@j];
 		RESRVPTS += (@wrpP[.@j]/16);
 	}
 	cutin "", 255;
@@ -612,51 +611,51 @@ function	script	F_KafSet	{
 
 	.@map$ = strnpcinfo(4);
 	if (.@map$ == "prontera") {
-		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morroc", "Orc Dungeon", "Alberta";
-		setarray @wrpP[0], 600, 1200, 1200, 1200, 1700, 1800;
+		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morroc", "Orc Dungeon", "Alberta", "Al De Baran";
+		setarray @wrpP[0], 600, 1200, 1200, 1200, 1700, 1800, 0;
 		setarray @viewpX[0], 151, 29, 282, 152;
 		setarray @viewpY[0], 29, 207, 200, 326;
 	} else if (.@map$ == "alberta") {
-		setarray @wrpP[0], 1200, 1800, 1800;
-		setarray @wrpD$[0], "Payon", "Morroc", "Prontera";
+		setarray @wrpP[0], 1200, 1800, 1800, 0;
+		setarray @wrpD$[0], "Payon", "Morroc", "Prontera", "Al De Baran";
 		setarray @viewpX[0], 28, 113, 0, 0;
 		setarray @viewpY[0], 229, 60, 0, 0;
 	} else if (.@map$ == "aldebaran") {
-		setarray @wrpP[0], 1200, 1200, 1800, 1700;
-		setarray @wrpD$[0], "Geffen", "Juno" , "Izlude", "Mjolnir Dead Pit";
+		setarray @wrpP[0], 1200, 1200, 1800, 1700, 0;
+		setarray @wrpD$[0], "Geffen", "Juno" , "Izlude", "Mjolnir Dead Pit", "Al De Baran";
 	} else if (.@map$ == "comodo" ) {
-		setarray @wrpD$[0], "Morroc", "Comodo Pharos Beacon", "Umbala";
-		setarray @wrpP[0], 1800, 1200, 1800;
+		setarray @wrpD$[0], "Morroc", "Comodo Pharos Beacon", "Umbala", "Al De Baran";
+		setarray @wrpP[0], 1800, 1200, 1800,0;
 	} else if (.@map$ == "cmd_fild07") {
-		setarray @wrpD$[0], "Comodo", "Morroc";
-		setarray @wrpP[0], 1200, 1200;
+		setarray @wrpD$[0], "Comodo", "Morroc", "Al De Baran";
+		setarray @wrpP[0], 1200, 1200,0;
 	} else if (.@map$ == "geffen") {
 		setarray @wrpD$[0], "Prontera", "Al De Baran", "Orc Dungeon", "Mjolnir Dead Pit";
-		setarray @wrpP[0], 1200, 1200, 1700, 1700;
+		setarray @wrpP[0], 1200, 0, 1700, 1700;
 		setarray @viewpX[0], 120, 203;
 		setarray @viewpY[0], 62, 123;
 	} else if (.@map$ == "izlude") {
 		setarray @wrpD$[0], "Geffen", "Payon", "Morroc", "Al De Baran";
-		setarray @wrpP[0], 1200, 1200, 1200, 1800;
+		setarray @wrpP[0], 1200, 1200, 1200, 0;
 	} else if (.@map$ == "morocc") {
-		setarray @wrpD$[0], "Prontera", "Payon", "Alberta", "Comodo", "Comodo Pharos Beacon";
-		setarray @wrpP[0], 1200, 1200, 1800, 1800, 1200;
+		setarray @wrpD$[0], "Prontera", "Payon", "Alberta", "Comodo", "Comodo Pharos Beacon", "Al De Baran";
+		setarray @wrpP[0], 1200, 1200, 1800, 1800, 1200,0;
 		setarray @viewpX[0], 156, 163, 28, 292;
 		setarray @viewpY[0], 97, 260, 167, 211;
 	} else if (.@map$ == "umbala") {
 		setarray @wrpD$[0], "Comodo";
 		setarray @wrpP[0], 1800;
 	} else if (.@map$ == "payon") {
-		setarray @wrpD$[0], "Prontera", "Alberta", "Morroc";
-		setarray @wrpP[0], 1200, 1200, 1200;
+		setarray @wrpD$[0], "Prontera", "Alberta", "Morroc", "Al De Baran";
+		setarray @wrpP[0], 1200, 1200, 1200,0;
 	} else if (.@map$ == "yuno") {
 		setarray @wrpD$[0], "Al De Baran";
-		setarray @wrpP[0], 1200;
+		setarray @wrpP[0], 0;
 		setarray @viewpX[0], 328, 278, 153, 0;
 		setarray @viewpY[0], 108, 221, 187, 0;
 	} else if (.@map$ == "job3_rune01") {
-		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morroc", "Alberta";
-		setarray @wrpP[0], 600, 1200, 1200, 1200, 1800;
+		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morroc", "Alberta", "Al De Baran";
+		setarray @wrpP[0], 600, 1200, 1200, 1200, 1800,0;
 	}
 
 	.@warp_size = getarraysize(@wrpD$);
