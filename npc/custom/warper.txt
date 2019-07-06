@@ -120,7 +120,7 @@ function Restrict {
 // --------------------------------------------------
 	Towns:
 // --------------------------------------------------
-menu	"Prontera",T1, "Aldebaran",T3, "Morroc", T27, "Alberta", T2;
+menu	"Prontera",T1, "Aldebaran",T3, "Morroc", T27, "Alberta", T2, "Geffen", T13;
 
 T1: Go("prontera",149,185);
 T2: Go("alberta",28,234);
