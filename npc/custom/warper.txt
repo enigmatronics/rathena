@@ -524,7 +524,7 @@ OnInit:
 // --------------------------------------------------
 alb2trea,57,70,6	duplicate(Warper)	Warper#tre	71
 alberta,28,240,4	duplicate(Warper)	Warper#alb	71
-// aldebaran,145,118,4	duplicate(Warper)	Warper#alde	71
+aldebaran,145,118,4	duplicate(Warper)	Warper#alde	71
 amatsu,203,87,4	duplicate(Warper)	Warper#ama	71
 ayothaya,209,169,6	duplicate(Warper)	Warper#ayo	71
 comodo,194,158,4	duplicate(Warper)	Warper#com	71
