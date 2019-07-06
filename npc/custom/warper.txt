@@ -24,7 +24,7 @@ function Go; function Disp; function Pick; function Restrict;
 // --------------------------------------------------
 
 menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
-    	" ~ Return to Aldebaran",Towns;
+    	" ~ Return to Aldebaran or Prontera",Towns;
 
 	if (lastwarp$ == "")
 		message strcharinfo(0),"You haven't warped anywhere yet.";
@@ -120,9 +120,9 @@ function Restrict {
 // --------------------------------------------------
 	Towns:
 // --------------------------------------------------
-menu	"Aldebaran",T1;
+menu	"Prontera",T1, "Aldebaran",T3;
 
-T1: Go("aldebaran",140,131);
+T1: Go("prontera",149,185);
 T2: Go("alberta",28,234);
 T3: Go("aldebaran",140,131);
 T4: Go("amatsu",198,84);
