@@ -656,6 +656,18 @@ function	script	F_KafSet	{
 	} else if (.@map$ == "job3_rune01") {
 		setarray @wrpD$[0], "Izlude", "Geffen", "Payon", "Morroc", "Alberta", "Al De Baran";
 		setarray @wrpP[0], 600, 1200, 1200, 1200, 1800,0;
+	} else if (.@map$ == "einbroch")
+	{
+		setarray @wrpD$[0], "Al De Baran";
+		setarray @wrpP[0], 0;
+	}else if (.@map$ == "lighthalzen")
+	{
+		setarray @wrpD$[0], "Al De Baran";
+		setarray @wrpP[0], 0;
+	}else if (.@map$ == "rachel")
+	{
+		setarray @wrpD$[0], "Al De Baran";
+		setarray @wrpP[0], 0;
 	}
 
 	.@warp_size = getarraysize(@wrpD$);
