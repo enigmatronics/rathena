@@ -7988,7 +7988,24 @@ ACMD_FUNC(me)
 	clif_disp_overhead(&sd->bl, atcmd_output);
 
 	return 0;
+}
+ACMD_FUNC(mes)
+{
+	char tempmes[CHAT_SIZE_MAX];
+	nullpo_retr(-1, sd);
 
+	memset(tempmes, '\0', sizeof(tempmes));
+	memset(atcmd_output, '\0', sizeof(atcmd_output));
+
+	if (!message || !*message || sscanf(message, "%255[^\n]", tempmes) < 0) {
+		clif_displaymessage(fd, msg_txt(sd,1302)); // Please enter a message (usage: @me <message>).
+		return -1;
+	}
+
+	sprintf(atcmd_output, msg_txt(sd,270), sd->status.name+"'s", tempmes);	// *%s %s*
+	clif_disp_overhead(&sd->bl, atcmd_output);
+
+	return 0;
 }
 
 /*==========================================
