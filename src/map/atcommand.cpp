@@ -7989,6 +7989,7 @@ ACMD_FUNC(me)
 
 	return 0;
 }
+
 ACMD_FUNC(mes)
 {
 	char tempmes[CHAT_SIZE_MAX];
@@ -10281,6 +10282,7 @@ void atcommand_basecommands(void) {
 		ACMD_DEF(whereis),
 		ACMD_DEF(mapflag),
 		ACMD_DEF(me),
+		ACMD_DEF(mes),
 		ACMD_DEF(monsterignore),
 		ACMD_DEF(fakename),
 		ACMD_DEF(size),
