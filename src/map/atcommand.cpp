@@ -6727,6 +6727,67 @@ ACMD_FUNC(pettalk)
 	return 0;
 }
 
+ACMD_FUNC(petme)
+{
+	char mes[100],temp[CHAT_SIZE_MAX];
+	struct pet_data *pd;
+
+	nullpo_retr(-1, sd);
+
+	if ( battle_config.min_chat_delay ) {
+		if( DIFF_TICK(sd->cantalk_tick, gettick()) > 0 )
+			return 0;
+		sd->cantalk_tick = gettick() + battle_config.min_chat_delay;
+	}
+
+	if(!sd->status.pet_id || !(pd=sd->pd))
+	{
+		clif_displaymessage(fd, msg_txt(sd,184)); // Sorry, but you have no pet.
+		return -1;
+	}
+
+	if (!message || !*message || sscanf(message, "%99[^\n]", mes) < 1) {
+		clif_displaymessage(fd, msg_txt(sd,1224)); // Please enter a message (usage: @pettalk <message>).
+		return -1;
+	}
+
+	snprintf(temp, sizeof temp ,"*%s %s*", pd->pet.name, mes);
+	clif_disp_overhead(&pd->bl, temp);
+
+	return 0;
+}
+
+ACMD_FUNC(petmes)
+{
+	char mes[100],temp[CHAT_SIZE_MAX];
+	struct pet_data *pd;
+
+	nullpo_retr(-1, sd);
+
+	if ( battle_config.min_chat_delay ) {
+		if( DIFF_TICK(sd->cantalk_tick, gettick()) > 0 )
+			return 0;
+		sd->cantalk_tick = gettick() + battle_config.min_chat_delay;
+	}
+
+	if(!sd->status.pet_id || !(pd=sd->pd))
+	{
+		clif_displaymessage(fd, msg_txt(sd,184)); // Sorry, but you have no pet.
+		return -1;
+	}
+
+	if (!message || !*message || sscanf(message, "%99[^\n]", mes) < 1) {
+		clif_displaymessage(fd, msg_txt(sd,1224)); // Please enter a message (usage: @pettalk <message>).
+		return -1;
+	}
+
+	snprintf(temp, sizeof temp ,"*%s's %s*", pd->pet.name, mes);
+	clif_disp_overhead(&pd->bl, temp);
+
+	return 0;
+}
+
+
 /// @users - displays the number of players present on each map (and percentage)
 /// #users displays on the target user instead of self
 ACMD_FUNC(users)
@@ -7587,6 +7648,67 @@ ACMD_FUNC(homtalk)
 	return 0;
 }
 
+ACMD_FUNC(homme)
+{
+	char mes[100],temp[CHAT_SIZE_MAX];
+
+	nullpo_retr(-1, sd);
+
+	if ( battle_config.min_chat_delay ) {
+		if( DIFF_TICK(sd->cantalk_tick, gettick()) > 0 )
+			return 0;
+		sd->cantalk_tick = gettick() + battle_config.min_chat_delay;
+	}
+
+	if (sd->sc.cant.chat || (sd->state.block_action & PCBLOCK_CHAT))
+		return -1; //no "chatting" while muted.
+
+	if ( !hom_is_active(sd->hd) ) {
+		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
+		return -1;
+	}
+
+	if (!message || !*message || sscanf(message, "%99[^\n]", mes) < 1) {
+		clif_displaymessage(fd, msg_txt(sd,1260)); // Please enter a message (usage: @homtalk <message>).
+		return -1;
+	}
+
+	snprintf(temp, sizeof temp ,"*%s %s*", sd->hd->homunculus.name, mes);
+	clif_disp_overhead(&sd->hd->bl, temp);
+
+	return 0;
+}
+
+ACMD_FUNC(hommes)
+{
+	char mes[100],temp[CHAT_SIZE_MAX];
+
+	nullpo_retr(-1, sd);
+
+	if ( battle_config.min_chat_delay ) {
+		if( DIFF_TICK(sd->cantalk_tick, gettick()) > 0 )
+			return 0;
+		sd->cantalk_tick = gettick() + battle_config.min_chat_delay;
+	}
+
+	if (sd->sc.cant.chat || (sd->state.block_action & PCBLOCK_CHAT))
+		return -1; //no "chatting" while muted.
+
+	if ( !hom_is_active(sd->hd) ) {
+		clif_displaymessage(fd, msg_txt(sd,1254)); // You do not have a homunculus.
+		return -1;
+	}
+
+	if (!message || !*message || sscanf(message, "%99[^\n]", mes) < 1) {
+		clif_displaymessage(fd, msg_txt(sd,1260)); // Please enter a message (usage: @homtalk <message>).
+		return -1;
+	}
+
+	snprintf(temp, sizeof temp ,"*%s's %s*", sd->hd->homunculus.name, mes);
+	clif_disp_overhead(&sd->hd->bl, temp);
+
+	return 0;
+}
 /*==========================================
  * Show homunculus stats
  *------------------------------------------*/
@@ -7988,7 +8110,82 @@ ACMD_FUNC(me)
 	clif_disp_overhead(&sd->bl, atcmd_output);
 
 	return 0;
+}
 
+ACMD_FUNC(mes)
+{
+	char tempmes[CHAT_SIZE_MAX];
+	nullpo_retr(-1, sd);
+
+	memset(tempmes, '\0', sizeof(tempmes));
+	memset(atcmd_output, '\0', sizeof(atcmd_output));
+
+	if (!message || !*message || sscanf(message, "%255[^\n]", tempmes) < 0) {
+		clif_displaymessage(fd, msg_txt(sd,1302)); // Please enter a message (usage: @me <message>).
+		return -1;
+	}
+
+	snprintf(atcmd_output, sizeof tempmes ,"*%s's %s*", sd->status.name, tempmes);
+
+	//sprintf(atcmd_output, msg_txt(sd,270), sd->status.name, tempmes);	// *%s %s*
+	clif_disp_overhead(&sd->bl, atcmd_output);
+	
+
+	return 0;
+}
+
+ACMD_FUNC(ooc)
+{
+	char tempmes[CHAT_SIZE_MAX];
+	nullpo_retr(-1, sd);
+
+	memset(tempmes, '\0', sizeof(tempmes));
+	memset(atcmd_output, '\0', sizeof(atcmd_output));
+
+	if (!message || !*message || sscanf(message, "%255[^\n]", tempmes) < 0) {
+		clif_displaymessage(fd, msg_txt(sd,1302)); // Please enter a message (usage: @me <message>).
+		return -1;
+	}
+
+	snprintf(atcmd_output, sizeof tempmes ,"(%s's : %s*)", sd->status.name, tempmes);
+
+	//sprintf(atcmd_output, msg_txt(sd,270), sd->status.name, tempmes);	// *%s %s*
+	clif_disp_overhead(&sd->bl, atcmd_output);
+	
+	return 0;
+}
+
+
+ACMD_FUNC(sleep)
+{
+   if (agit_flag) // skill not useable in WOE [A17kaliva]
+   {
+    clif_displaymessage(fd, "Cannot use this command during WOE.");
+    return -1;
+   }
+   if(!battle_config.prevent_logout || DIFF_TICK(gettick(), sd->canlog_tick) > 10) {
+   if(sd->sc.opt1 != 0 && sd->sc.opt1 != OPT1_SLEEP){
+    clif_displaymessage(fd, msg_txt(sd,807));
+	    return -1;
+   }
+   if(sd->sc.opt1 != OPT1_SLEEP){
+    sc_start(NULL, &sd->bl, SC_TRICKDEAD, 100, 1, 1000);
+    sd->sc.opt1 = OPT1_SLEEP;
+    sc_start(NULL, &sd->bl,SC_COMA,100,1,skill_get_time2(185,1));
+    clif_displaymessage(fd, msg_txt(sd,805));
+   } else {
+    sd->sc.opt1 = 0;
+    clif_emotion(&sd->bl,45);
+    status_change_end(&sd->bl, SC_TRICKDEAD, -1);
+    sc_start(NULL, &sd->bl,SC_COMA,100,1,skill_get_time2(185,1));
+    clif_displaymessage(fd, msg_txt(sd,806));
+   }
+
+    clif_changeoption(&sd->bl);
+	    return 0;
+   }
+    clif_displaymessage(fd, msg_txt(sd,807));
+	    return -1;
 }
 
 /*==========================================
@@ -10242,6 +10439,8 @@ void atcommand_basecommands(void) {
 		ACMD_DEF(cleanarea),
 		ACMD_DEF(npctalk),
 		ACMD_DEF(pettalk),
+		ACMD_DEF(petme),
+		ACMD_DEF(petmes),
 		ACMD_DEF(users),
 		ACMD_DEF(reset),
 		ACMD_DEF(skilltree),
@@ -10264,6 +10463,8 @@ void atcommand_basecommands(void) {
 		ACMD_DEF(whereis),
 		ACMD_DEF(mapflag),
 		ACMD_DEF(me),
+		ACMD_DEF(mes),
+		ACMD_DEF(ooc),
 		ACMD_DEF(monsterignore),
 		ACMD_DEF(fakename),
 		ACMD_DEF(size),
@@ -10293,6 +10494,8 @@ void atcommand_basecommands(void) {
 		ACMD_DEF(homfriendly),
 		ACMD_DEF(homhungry),
 		ACMD_DEF(homtalk),
+		ACMD_DEF(homme),
+		ACMD_DEF(hommes),
 		ACMD_DEF(hominfo),
 		ACMD_DEF(homstats),
 		ACMD_DEF(homshuffle),
@@ -10330,6 +10533,7 @@ void atcommand_basecommands(void) {
 		ACMD_DEFR(channel,ATCMD_NOSCRIPT),
 		ACMD_DEF(fontcolor),
 		ACMD_DEF(langtype),
+		ACMD_DEF(sleep),
 #ifdef VIP_ENABLE
 		ACMD_DEF(vip),
 		ACMD_DEF(showrate),
