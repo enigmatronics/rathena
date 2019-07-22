@@ -51,7 +51,7 @@ payon,173,141,4	script	Ripped Cabus#GymPass	899,{
 	next;
 	switch(select("Yes:No:Um, my workouts wore off.")) {
 	case 1:
-		if (gympassmemory < 10) {
+		if (gympassmemory < 5) {
 			set .@add_carry,gympassmemory + 1;
 			set .@remain_carry,10 - .@add_carry;
 			if (countitem(7776) > 0) {
