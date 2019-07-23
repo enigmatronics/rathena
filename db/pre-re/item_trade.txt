@@ -726,8 +726,6 @@
 5597,507,100	// Bubble Gum In Mouth
 6046,507,100	// Clothing Dye Coupon
 6047,507,100	// Clothing Dye Coupon II
-7619,475,100	// Enriched Elunium
-7620,475,100	// Enriched Oridecon
 7621,475,100	// Token Of Siegfried
 7622,73,100	// Hairstyle Coupon
 7766,475,100	// Bok Choy
