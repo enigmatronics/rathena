@@ -1,0 +1,45 @@
+//===== rAthena Script =======================================
+//= Oridecon & Elunium Enrichment NPC
+//===== Description: =========================================
+//= Enriches Elunium and Oridecon in Payon
+//===== Changelogs: ==========================================
+//= 0.9 Klang Klang
+//============================================================
+
+payon,157,151,6	script	Yin	695,{
+    mes "[Yin]";
+    mes "Let me guess, sick of your gear breaking? Refining equipment stress you out? For 20,000z and 10 of the base material, I can craft you an enriched version that will be far easier to work with!";
+    next;
+    menu "Make me Enriched Oridecon",-, "Make me Enriched Elunium", L_opt2, "Sorry, I'm not interested", L_opt3;
+	if (Zeny >=20000 && countitem(984) >=10) {
+		Zeny -= 20000;
+		delitem 984,10;
+		getitem 7620,1;
+		mes "[Yin]";
+		mes "Great! Now just talk to Suhnbi over there and he will help you right out!";
+		close;
+	}
+	if (Zeny < 20000 || countitem(984) <10) {
+		mes "[Yin]";
+		mes "Sorry, come back with the cash and materials when you have them!";
+		close;
+	}
+	L_opt2:
+		if (Zeny >=20000 && countitem(985) >=10) {
+		Zeny -= 20000;
+		delitem 985,10;
+		getitem 7619,1;
+		mes "[Yin]";
+		mes "Great! Now just talk to Suhnbi over there and he will help you right out!";
+		close;
+	}
+	if (Zeny < 20000 || countitem(985) <10) {
+		mes "[Yin]";
+		mes "Sorry, come back with the cash and materials when you have them!";
+		close;
+	}
+	L_opt3:
+		mes "[Yin]";
+		mes "Best of luck!";
+		close;
+}
