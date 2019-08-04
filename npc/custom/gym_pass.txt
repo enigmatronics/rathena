@@ -1,0 +1,37 @@
+//===== rAthena Script =======================================
+//= Gym Pass Salesman
+//===== Description: =========================================
+//= Sells Gym Passes in Aldebaran to use in Payon
+//===== Changelogs: ==========================================
+//= 0.9 Hey Baby
+//============================================================
+
+aldebaran,177,103,4	script	Stefan	106,{
+    mes "[Stefan]";
+    mes "Hey there!";
+    mes "Have you heard about the new Gym out in Payon? You're looking pretty scrawny... some quality time with my buddy Cabus could have you jacked in no time! If you're interested, I could sell you a Gym Pass for one session with him.";
+    next;
+    menu "Yes, sign me up",-, "No, I'm not interested", L_opt2;
+
+    mes "[Stefan]";
+    mes "Alright, for 300,000z, one Gym pass is yours. It usually takes about five sessions to see the full effect of the training.";
+    next;
+    menu "I will take one",-, "No, I changed my mind", L_opt2;
+    if (Zeny >=300000) {
+        Zeny -= 300000;
+        getitem 7776,1;
+        mes "[Stefan]";
+        mes "No pain, no gain!";
+        close;
+    }
+    if (Zeny < 300000) {
+        mes "[Stefan]";
+        mes "You're going to need more coin if you want to ditch those noodle arms!";
+        close;
+    }
+
+    L_opt2:
+        mes "[Stefan]";
+        mes "If you like going through life with those noodle arms, that's your choice!";
+        close;
+}
