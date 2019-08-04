@@ -8147,7 +8147,7 @@ ACMD_FUNC(ooc)
 		return -1;
 	}
 
-	snprintf(atcmd_output, sizeof tempmes ,"(%s's : %s*)", sd->status.name, tempmes);
+	snprintf(atcmd_output, sizeof tempmes ,"%s (ooc): (%s"), sd->status.name, tempmes);
 
 	//sprintf(atcmd_output, msg_txt(sd,270), sd->status.name, tempmes);	// *%s %s*
 	clif_disp_overhead(&sd->bl, atcmd_output);
