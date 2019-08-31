@@ -3,7 +3,6 @@
 // Structure of Database:
 // MobRandomGroupID,MobID,DummyName,Rate
 
-MOBG_Bloody_Dead_Branch,0,Baphomet,1039
 MOBG_Bloody_Dead_Branch,1038,Osiris,500000
 MOBG_Bloody_Dead_Branch,1039,Baphomet,500000
 MOBG_Bloody_Dead_Branch,1046,Doppelganger,500000

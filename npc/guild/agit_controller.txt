@@ -38,14 +38,14 @@ OnClock2300:	//end time for Tuesday and Thursday
 OnClock1600:	//start time for Saturday
 OnClock1800:	//end time for Saturday
 
-OnAgitInit:
+/* OnAgitInit:
 	// starting time checks
 	if((gettime(DT_DAYOFWEEK)==TUESDAY) && (gettime(DT_HOUR)>=21 && gettime(DT_HOUR)<23) ||
 	   (gettime(DT_DAYOFWEEK)==THURSDAY) && (gettime(DT_HOUR)>=21 && gettime(DT_HOUR)<23) ||
 	   (gettime(DT_DAYOFWEEK)==SATURDAY) && (gettime(DT_HOUR)>=16 && gettime(DT_HOUR)<18)) {
 		if (!agitcheck()) {
 			AgitStart;
-			callsub S_DisplayOwners;
+			callsub S_DisplayOwners; 
 		}
 		end;
 	}
@@ -75,5 +75,5 @@ S_DisplayOwners:
 			Announce "The [" + GetCastleName(.@maps$[.@i]) + "] castle is currently unoccupied.",bc_all|bc_woe;
 		}
 	}
-	end;
+	end;*/
 }
