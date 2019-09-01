@@ -19,7 +19,8 @@ aldebaran,147,117,4	script	Toulouse	625,{
 
 		L_opt0:
 			if (ismounting()) {
-				message strcharinfo(0),"You already have a mount, it seems!";
+				mes "[Toulouse]";
+				mes "You already have a mount, it seems!";
 				close;
 			} else if (((eaclass()&EAJ_THIRDMASK)==EAJ_RANGER) && !countitem(6124)) {
 				if (!checkfalcon() && getskilllv("HT_FALCON") && !checkwug()) {
@@ -38,11 +39,12 @@ aldebaran,147,117,4	script	Toulouse	625,{
 				else setriding;
 			} else if (!checkmadogear() && getskilllv("NC_MADOLICENCE")) setmadogear;
 			else {
-				message strcharinfo(0),"It would appear you have nothing I can rent you! C'est la vie, mon ami!";
+				mes "[Toulouse]";
+				mes "It would appear you have nothing I can rent you! C'est la vie, mon ami!";
 				close;
 			}
 			specialeffect2 EF_TEIHIT3;
-			close;
+			end;
 
 		L_opt1:
 			mes "[Toulouse]";
