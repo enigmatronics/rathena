@@ -431,5 +431,5 @@ nyd_dun02	mapflag	noteleport
 //evt_zombie	mapflag	noteleport
 
 // Custom Maps ==============
-1@uns	mapflag noteleport
-1@uns	mapflag monster_noteleport
+1@uns	mapflag	noteleport
+1@uns	mapflag	monster_noteleport
