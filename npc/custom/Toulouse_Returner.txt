@@ -6,7 +6,7 @@
 //= 0.5 Insert silly Toulouse lines here
 //============================================================
 
-1@uns,246,250,4	script	Toulouse	625,{
+1@uns,246,250,6	script	Toulouse	625,{
 	mes "[Toulouse]";
 	mes "Have we had enough of this dank and dreary place, mon ami?";
 	next;
@@ -18,7 +18,7 @@
 		L_opt1:
 			mes "[Toulouse]";
 			mes "Then in that case, let's get you back above ground, oui?";
-			Go("aldebaran",140,131);
+			warp "aldebaran",140,131;
 			close;
 			}
 			
@@ -35,6 +35,6 @@ pvp_n_1-5,96,137,4	script	Toulouse	625,{
 		L_opt1:
 			mes "[Toulouse]";
 			mes "Allow me to bring you back to the City Square, then.";
-			Go("aldebaran",140,131);
+			warp "aldebaran",140,131;
 			close;
 			}
