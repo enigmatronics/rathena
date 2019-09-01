@@ -6,11 +6,11 @@
 //= 0.5 Insert silly Toulouse lines here
 //============================================================
 
-aldebaran,147,117,6	script	Toulouse 625,{
-    mes "[Toulouse]";
-    mes "Bonjour, mon ami! I am the esteemed Toulouse Berlioux, liason of Luina for the city of Al De Baran! With re-establishment of Guilds in the region, I'm here to make facilitate things for all you big shots. Now, how can I be of service?";
-    next;
-    menu 	"Transport me to one of the liberated castles",Castles, 
+aldebaran,147,117,6	script	Toulouse	625,{
+	mes	"[Toulouse]";
+	mes	"Bonjour, mon ami! I am the esteemed Toulouse Berlioux, liason of Luina for the city of Al De Baran! With re-establishment of Guilds in the region, I'm here to make facilitate things for all you big shots. Now, how can I be of service?";
+	next;
+	menu 	"Transport me to one of the liberated castles",Castles, 
 			"Open up the Training Hall", L_opt1,
 			"Send me to The End of the Road", L_opt2,
 			"I don't need anything at the moment.",L_opt3;

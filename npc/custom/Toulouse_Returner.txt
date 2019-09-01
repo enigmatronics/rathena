@@ -6,11 +6,11 @@
 //= 0.5 Insert silly Toulouse lines here
 //============================================================
 
-1@uns,246,250,4	script	Toulouse 625,{
-    mes "[Toulouse]";
-    mes "Have we had enough of this dank and dreary place, mon ami?";
-    next;
-    menu 	"Not yet!",-, "I'm ready to leave", L_opt1;
+1@uns,246,250,4	script	Toulouse	625,{
+	mes "[Toulouse]";
+	mes "Have we had enough of this dank and dreary place, mon ami?";
+	next;
+	menu 	"Not yet!",-, "I'm ready to leave", L_opt1;
 			mes "[Toulouse]";
 			mes "Magnifique! Practice makes perfect against all manner of beasts!";
 			close;
@@ -23,11 +23,11 @@
 			}
 			
 			
-pvp_n_1-5,96,137,4 script Toulouse 625,{
-    mes "[Toulouse]";
-    mes "Oh? Had your fill of beating up your friends?";
-    next;
-    menu 	"Are you kidding?",-, "Yes, I'm ready to head back", L_opt1;
+pvp_n_1-5,96,137,4	script	Toulouse	625,{
+	mes "[Toulouse]";
+	mes "Oh? Had your fill of beating up your friends?";
+	next;
+	menu 	"Are you kidding?",-, "Yes, I'm ready to head back", L_opt1;
 			mes "[Toulouse]";
 			mes "Impressionant. Keep it up, then!";
 			close;
