@@ -1,0 +1,54 @@
+//===== rAthena Script =======================================
+//= Toulouse the Guild Assistant
+//===== Description: =========================================
+//= Provides ease of access for Plot-related shenanigans
+//===== Changelogs: ==========================================
+//= 0.5 Insert silly Toulouse lines here
+//============================================================
+
+aldebaran,147,117,6	script	Toulouse 625,{
+    mes "[Toulouse]";
+    mes "Bonjour, mon ami! I am the esteemed Toulouse Berlioux, liason of Luina for the city of Al De Baran! With re-establishment of Guilds in the region, I'm here to make facilitate things for all you big shots. Now, how can I be of service?";
+    next;
+    menu 	"Transport me to one of the liberated castles",Castles, 
+			"Open up the Training Hall", L_opt1,
+			"Send me to The End of the Road", L_opt2,
+			"I don't need anything at the moment.",L_opt3;
+				
+		L_opt1:
+			mes "[Toulouse]";
+			mes "The training hall is where anyone can go to test their skills against... well, anyone else! Watch out for friendly fire in there, friend!";
+			next;
+			menu "Lead the way!",-, "I changed my mind", L_opt3;
+			mes "[Toulouse]";
+			mes "Show them at least a little mercy, merci!";
+			go("pvp_n_1-5",99, 65);
+			close;
+			
+			
+		L_opt2:
+			mes "[Toulouse]";
+			mes "Ooooh, I can't get into just where The End of the Road is, but I can get you there right quick. Beware, any sorts of beasties could be left behind in that place... but that's the fun, right?";
+			next;
+			menu "I'm ready!",-, "When you put it that way...", L_opt3;
+			mes "[Toulouse]";
+			mes "Au revoir!";
+			go("1@uns",238, 257);
+			close;
+			
+			
+		L_opt3:
+			mes "[Toulouse]";
+			mes "Until next time, then!";
+			close;
+			
+			
+			
+// --------------------------------------------------
+	Castles:
+// --------------------------------------------------
+menu	"Hohenschwangau, of the Celestial Sentinels", C1;
+
+C1: Go("alde_gld",93, 241);
+
+		}
