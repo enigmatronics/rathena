@@ -1492,7 +1492,7 @@
 2669,Golden_Necklace_,RJC Necklace,4,30000,,100,,0,,1,0xFFFFFFFF,7,2,136,,0,0,0,{ bonus bMaxSP,10; },{},{}
 2670,Ring_Of_Longing,Ring of Longing,4,20,,100,,1,,0,0xFFFFFFFF,7,2,136,,30,0,0,{ bonus bFlee,5; },{},{}
 2671,Thimble_Of_Archer_,Bow Thimble,4,10000,,100,,0,,1,0x00080808,7,2,136,,65,0,0,{ bonus bLongAtkRate,3; },{},{}
-2672,Anniversary_Ring,3rd Anniversary Celebration Ring,4,20,,100,,0,,0,0xFFFFFFFE,7,2,136,,0,0,0,{},{},{}
+2672,Anniversary_Ring,3rd Anniversary Celebration Ring,4,20,,100,,0,,0,0xFFFFFFFE,7,2,136,,0,0,0,{},{changebase 1; },{changebase Class;}
 2673,Shining_Ring,Warrior's Shining Ring,4,0,,100,,0,,0,0xFFFFFFFE,7,2,136,,48,0,0,{ bonus bBaseAtk,10; bonus bSPrecovRate,3; },{},{}
 2674,Honor_Ring,Ring of Honor,4,20,,0,,0,,0,0xFFFFFFFF,7,2,136,,1,0,0,{},{},{}
 2675,Lord_Ring,Lord Ring,4,0,,10,,0,,0,0xFFFFFFFF,7,2,136,,1,0,0,{ bonus bAllStats,3; },{},{}
