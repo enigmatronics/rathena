@@ -2719,7 +2719,7 @@
 5536,Spare_Card,Spare Card,4,20,,10,,1,,0,0xFFFFFFFF,7,2,1,,1,0,526,{ bonus2 bAddMonsterDropItem,6187,1000; },{},{}
 5537,Quati_Hat,Kwati Hat,4,20,,700,,2,,1,0xFFFFFFFF,7,2,256,,45,0,527,{ bonus bAgi,3; },{},{}
 5538,Tucan_Hat,Tucan Hat,4,20,,600,,2,,1,0xFFFFFFFF,7,2,768,,45,0,528,{ bonus bDex,3; },{},{}
-5539,Jaguar_Hat,Jaguar Hat,4,20,,400,,4,,1,0xFFFFFFFF,7,2,769,,25,1,530,{ bonus bMdef,2; skill "MC_LOUD", 1; },{changebase 1; },{changebase Class;}
+5539,Jaguar_Hat,Jaguar Hat,4,20,,400,,4,,1,0xFFFFFFFF,7,2,769,,25,1,530,{ bonus bMdef,2; skill "MC_LOUD", 1; },{},{}
 5540,Freyja_SCirclet7,Freyja SCirclet7,4,20,,700,,8,,0,0xFFFFFFFF,7,2,256,,20,0,18,{ bonus bStr,1; bonus bInt,1; bonus bDex,1; },{},{}
 5541,Freyja_SCirclet30,Freyja SCirclet30,4,20,,700,,8,,0,0xFFFFFFFF,7,2,256,,20,0,18,{ bonus bStr,1; bonus bInt,1; bonus bDex,1; },{},{}
 5542,Freyja_SCirclet60,Freyja SCirclet60,4,20,,700,,8,,0,0xFFFFFFFF,7,2,256,,20,0,18,{ bonus bStr,1; bonus bInt,1; bonus bDex,1; },{},{}
