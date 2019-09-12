@@ -715,4 +715,4 @@ bossnia_04	mapflag	nomemo
 2012rwc_08	mapflag	nomemo
 
 // Custom Maps =============
-1@uns mapflag nomemo
+1@uns	mapflag	nomemo

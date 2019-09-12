@@ -4,17 +4,48 @@
 //= Provides ease of access for Plot-related shenanigans
 //===== Changelogs: ==========================================
 //= 0.5 Insert silly Toulouse lines here
+//= 0.8 Toulouse will mount for you
 //============================================================
 
-aldebaran,147,117,6	script	Toulouse 625,{
-    mes "[Toulouse]";
-    mes "Bonjour, mon ami! I am the esteemed Toulouse Berlioux, liason of Luina for the city of Al De Baran! With re-establishment of Guilds in the region, I'm here to make facilitate things for all you big shots. Now, how can I be of service?";
-    next;
-    menu 	"Transport me to one of the liberated castles",Castles, 
+aldebaran,147,117,4	script	Toulouse	625,{
+	mes	"[Toulouse]";
+	mes	"Bonjour, mon ami! I am the esteemed Toulouse Berlioux, liaison of Luina for the city of Al De Baran! With re-establishment of Guilds in the region, I'm here to facilitate things for all you big shots. Now, how can I be of service?";
+	next;
+	menu 	"Transport me to one of the liberated castles",Castles, 
+			"I'd like a Mount or Cart", L_opt0,
 			"Open up the Training Hall", L_opt1,
 			"Send me to The End of the Road", L_opt2,
 			"I don't need anything at the moment.",L_opt3;
-				
+
+		L_opt0:
+			if (ismounting()) {
+				mes "[Toulouse]";
+				mes "You already have a mount, it seems!";
+				close;
+			} else if (((eaclass()&EAJ_THIRDMASK)==EAJ_RANGER) && !countitem(6124)) {
+				if (!checkfalcon() && getskilllv("HT_FALCON") && !checkwug()) {
+					if(select(" ~ Falcon: ~ Warg")==1) setfalcon;
+					else getitem 6124,1; //Wolf's_Flute
+				} else getitem 6124,1; //Wolf's_Flute
+			} else if (((eaclass()&EAJ_THIRDMASK)==EAJ_MECHANIC) && !checkcart() && getskilllv("MC_PUSHCART")) {
+				if (!checkmadogear() && getskilllv("NC_MADOLICENCE")) {
+					if(select(" ~ Cart: ~ Mado")==1) setcart;
+					else setmadogear;
+				} else setcart;
+			} else if (!checkcart() && getskilllv("MC_PUSHCART")) setcart;
+			else if (!checkfalcon() && getskilllv("HT_FALCON") && !checkwug()) setfalcon;
+			else if (!checkriding() && !checkdragon() && getskilllv("KN_RIDING")) {
+				if ((eaclass()&EAJ_THIRDMASK)==EAJ_RUNE_KNIGHT) setdragon;
+				else setriding;
+			} else if (!checkmadogear() && getskilllv("NC_MADOLICENCE")) setmadogear;
+			else {
+				mes "[Toulouse]";
+				mes "It would appear you have nothing I can rent you! C'est la vie, mon ami!";
+				close;
+			}
+			specialeffect2 EF_TEIHIT3;
+			end;
+
 		L_opt1:
 			mes "[Toulouse]";
 			mes "The training hall is where anyone can go to test their skills against... well, anyone else! Watch out for friendly fire in there, friend!";
@@ -22,7 +53,7 @@ aldebaran,147,117,6	script	Toulouse 625,{
 			menu "Lead the way!",-, "I changed my mind", L_opt3;
 			mes "[Toulouse]";
 			mes "Show them at least a little mercy, merci!";
-			go("pvp_n_1-5",99, 65);
+			warp "pvp_n_1-5",99,65;
 			close;
 			
 			
@@ -33,7 +64,7 @@ aldebaran,147,117,6	script	Toulouse 625,{
 			menu "I'm ready!",-, "When you put it that way...", L_opt3;
 			mes "[Toulouse]";
 			mes "Au revoir!";
-			go("1@uns",238, 257);
+			warp "1@uns",238,257;
 			close;
 			
 			
@@ -49,6 +80,6 @@ aldebaran,147,117,6	script	Toulouse 625,{
 // --------------------------------------------------
 menu	"Hohenschwangau, of the Celestial Sentinels", C1;
 
-C1: Go("alde_gld",93, 241);
+C1: warp "alde_gld",93,241;
 
 		}
