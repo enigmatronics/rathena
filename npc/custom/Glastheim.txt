@@ -18,6 +18,7 @@ gef_fild06,23,308,4	script	Minotaur	1149,{
 	mes "[Minotaur]";
 	mes "Me Dubin.";
 	next;
+	mes "[Dubin]";
 	mes "So bored. Want to play game?";
 	close;
 }

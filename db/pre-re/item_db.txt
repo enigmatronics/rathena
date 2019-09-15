@@ -6592,28 +6592,28 @@
 
 22777,Gift_Buff_Set,Gift Buff Set,2,10,,100,,,,0,0xFFFFFFFF,63,2,,,1,,,{},{},{}
 
-30000,Novice_Tunic,Novice's Tunic,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 0; },{changebase Class; }
+30000,Novice_Tunic,Novice's Tunic,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 0; },{changebase Class; }
 30001,Squires_Breastplate,Squire's Breastplate,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 1; },{changebase Class; }
-30002,Magicians_Cloth,Magician's Cloth,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 2; },{changebase Class; }
-30003,Archers_Blouse,Archer's Blouse,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 3; },{changebase Class; }
-30004,Acolytes_Frock,Acolyte's Frock,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 4; },{changebase Class; }
-30005,Merchants_Pack,Merchant's Pack,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 5; },{changebase Class; }
-30006,Thief_Catsuit,Thief's Catsuit,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 6; },{changebase Class; }
-30007,Knights_Chainmail,Knight's Chainmail,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 7; },{changebase Class; }
-30008,Priests_Habit,Priest's Habit,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 8; },{changebase Class; }
-30009,Wizards_Robe,Wizard's Robe,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 9; },{changebase Class; }
-30010,Blacksmiths_Smock,Blacksmith's Smock,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 10; },{changebase Class; }
-30011,Hunters_Shorts,Hunter's Shorts,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 11; },{changebase Class; }
-30012,Assassins_Tights,Assassin's Tights,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 12; },{changebase Class; }
-30013,Crusaders_Plate,Crusader's Platemail,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 14; },{changebase Class; }
-30014,Monks_Vestment,Monk's Vestment,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 15; },{changebase Class; }
-30015,Sages_Duster,Sage's Duster,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 16; },{changebase Class; }
-30016,Rogues_Jacket,Rogue's Jacket,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 17; },{changebase Class; }
-30017,Alchemists_Labcoat,Alchemist's Labcoat,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 18; },{changebase Class; }
-30018,Performers_Outfit,Performer's Outfit,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ if(Sex == 1){changebase 19;} else if(Sex == 0) {changebase 20}; },{changebase Class; }
-30019,SuperNovices_Romper,Super Novice's Romper,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 23; },{changebase Class; }
-30020,Gunslinger_Trenchcoat,Gunslinger's Trenchcoat,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 24; },{changebase Class; }
-30021,Ninjas_Gymslip,Ninja's Gymslip,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 25; },{changebase Class; }
-30022,Taekwons_KarateGi,Taekwon's Karate Gi,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 4046; },{changebase Class; }
-30023,StarGladiators_JudoGi,Star Gladiator's Judo Gi,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 4047; },{changebase Class; }
-30024,SoulLinkers_Drape,Soul Linker's Drape,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,,{},{ changebase 4049; },{changebase Class; }
+30002,Magicians_Cloth,Magician's Cloth,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 2; },{changebase Class; }
+30003,Archers_Blouse,Archer's Blouse,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 3; },{changebase Class; }
+30004,Acolytes_Frock,Acolyte's Frock,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 4; },{changebase Class; }
+30005,Merchants_Pack,Merchant's Pack,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 5; },{changebase Class; }
+30006,Thief_Catsuit,Thief's Catsuit,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 6; },{changebase Class; }
+30007,Knights_Chainmail,Knight's Chainmail,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 7; },{changebase Class; }
+30008,Priests_Habit,Priest's Habit,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 8; },{changebase Class; }
+30009,Wizards_Robe,Wizard's Robe,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 9; },{changebase Class; }
+30010,Blacksmiths_Smock,Blacksmith's Smock,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 10; },{changebase Class; }
+30011,Hunters_Shorts,Hunter's Shorts,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 11; },{changebase Class; }
+30012,Assassins_Tights,Assassin's Tights,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 12; },{changebase Class; }
+30013,Crusaders_Plate,Crusader's Platemail,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 14; },{changebase Class; }
+30014,Monks_Vestment,Monk's Vestment,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 15; },{changebase Class; }
+30015,Sages_Duster,Sage's Duster,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 16; },{changebase Class; }
+30016,Rogues_Jacket,Rogue's Jacket,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 17; },{changebase Class; }
+30017,Alchemists_Labcoat,Alchemist's Labcoat,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 18; },{changebase Class; }
+30018,Performers_Outfit,Performer's Outfit,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ if(Sex == 1){changebase 19;} else if(Sex == 0) {changebase 20}; },{changebase Class; }
+30019,SuperNovices_Romper,Super Novice's Romper,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 23; },{changebase Class; }
+30020,Gunslinger_Trenchcoat,Gunslinger's Trenchcoat,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 24; },{changebase Class; }
+30021,Ninjas_Gymslip,Ninja's Gymslip,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 25; },{changebase Class; }
+30022,Taekwons_KarateGi,Taekwon's Karate Gi,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 4046; },{changebase Class; }
+30023,StarGladiators_JudoGi,Star Gladiator's Judo Gi,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 4047; },{changebase Class; }
+30024,SoulLinkers_Drape,Soul Linker's Drape,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 4049; },{changebase Class; }
