@@ -1,0 +1,32 @@
+// Minotaur guards
+// Description: Minor npcs to give the guards some flavor
+// Changelog: 
+// 1.0 - Original versions
+
+gef_fild06,23,299,4	script	Minotaur	1149,{
+	mes "[Minotaur]";
+	mes "Little pink thing.";
+	mes "Me Dyrval.";
+	next;
+	mes "[Dyrval]";
+	mes "Can go in. Herd not come out.";
+	mes "Raldon says okay to go in.";
+	close;
+}
+
+gef_fild06,23,308,4	script	Minotaur	1149,{
+	mes "[Minotaur]";
+	mes "Me Dubin.";
+	next;
+	mes "So bored. Want to play game?";
+	close;
+}
+
+glast_01,373,299,4	script	Minotaur	1149,{
+	mes "[Minotaur]";
+	mes "Me am Mortyn.";
+	next;
+	mes "[Mortyn]";
+	mes "Hungry... little thing bring Mortyn food?";
+	close;
+}
