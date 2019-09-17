@@ -289,4 +289,7 @@ bat_a02	mapflag	nopenalty
 2012rwc_07	mapflag	nopenalty
 2012rwc_08	mapflag	nopenalty
 
+pvp_n_1-5	mapflag	nopenalty
+1@uns	mapflag	nopenalty
+
 //evt_zombie	mapflag	nopenalty
