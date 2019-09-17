@@ -15,18 +15,18 @@
 //= Version 2.0: Optimized and brought the script up to standard. [Jguy]
 //============================================================ 
 
-aldebaran,130,138,5	script	Banker	109,{
+aldebaran,130,138,5	script	Sterling Pound	109,{
 	set @cost,500;
-	mes "[Banker]";
-	mes "Welcome to the First Bank of Prontera. How can I help you today?";
+	mes "[Sterling Pound]";
+	mes "Welcome to Al De Baran Financial. How can I help you today?";
 	next;
 	switch(select("I'd like to make a deposit.:I'd like to make a withdrawal.:What's my current balance?:Cancel")) {
 	case 1:
-		mes "[Banker]";
+		mes "[Sterling Pound]";
 		mes "Very well... How much would you like to deposit? The maximum you can deposit at once is 999,999 Zeny.";
 		next;
 		if (@cost > 0) {
-			mes "[Banker]";
+			mes "[Sterling Pound]";
 			mes "Oh, and do realize there is a " +@cost + " Zeny charge on all transactions!";
 			next;
 		}
@@ -47,16 +47,16 @@ aldebaran,130,138,5	script	Banker	109,{
 			set Zeny,Zeny - @deposit;
 			set Zeny,Zeny - @cost;
 			set #bankstorage,#bankstorage + @deposit;
-			mes "[Banker]";
+			mes "[Sterling Pound]";
 			mes "Thank you very much... Your zeny is in good hands.";
 			close;
 		}
 	case 2:
-		mes "[Banker]";
+		mes "[Sterling Pound]";
 		mes "Very well... How much would you like to withdraw? The maximum you can withdraw at one time is 999,999 Zeny";
 		next;
 		if (@cost > 0) {
-			mes "[Banker]";
+			mes "[Sterling Pound]";
 			mes "Oh, and do realize there is a " +@cost + " Zeny charge on all transactions!";
 			next;
 		}
@@ -70,12 +70,12 @@ aldebaran,130,138,5	script	Banker	109,{
 			close;
 		}
 		else if ((@cost > Zeny) && ((Zeny + @withdrawl) > @cost)) {
-			mes "[Banker]";
+			mes "[Sterling Pound]";
 			mes "You don't have the Zeny for the transaction fee right now. Would you like me to take the fee directly from your withdrawal?";
 			next;
 			switch(select("Yes please.:No, Thanks")){
 			case 1:
-				mes "[Banker]";
+				mes "[Sterling Pound]";
 				mes "Removing " + @cost + " from your withdrawal to cover the deposit fee...";
 				set @withdrawl,@withdrawl - @cost;
 				set #bankstorage,#bankstorage - @cost;
@@ -84,11 +84,11 @@ aldebaran,130,138,5	script	Banker	109,{
 				set Zeny,Zeny - @cost;
 				set Zeny,Zeny + @withdrawl;
 				set #bankstorage,#bankstorage - @withdrawl;
-				mes "[Banker]";
+				mes "[Sterling Pound]";
 				mes "There's your Zeny. Have a good day.";
 				close;
 			case 2:
-				mes "[Banker]";
+				mes "[Sterling Pound]";
 				mes "Very well... come again soon.";
 				close;
 			}
@@ -97,21 +97,21 @@ aldebaran,130,138,5	script	Banker	109,{
 			set Zeny,Zeny - @cost;
 			set Zeny,Zeny + @withdrawl;
 			set #bankstorage,#bankstorage - @withdrawl;
-			mes "[Banker]";
+			mes "[Sterling Pound]";
 			mes "There's your Zeny. Have a good day.";
 			close;
 		}
 	case 3:
-		mes "[Banker]";
+		mes "[Sterling Pound]";
 		mes "Hmmmm... let me check some paper work.";
 		next;
 		mes "*Rustle, Rustle*";
 		next;
-		mes "[Banker]";
+		mes "[Sterling Pound]";
 		mes "You currently have " + callfunc("F_InsertComma",#bankstorage) + " Zeny in your account.";
 		close;
 	case 4:
-		mes "[Banker]";
+		mes "[Sterling Pound]";
 		mes "Very well... come again soon.";
 		close;
 	}

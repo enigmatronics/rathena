@@ -15,7 +15,7 @@ function	script	ValueConvert	{
 
 -	script	Stylist	-1,{
 OnTalk:
-	mes "[^0055FF ::: Adv. Stylist ::: ^000000]";
+	mes "[^0055FF ::: Shear Genius ::: ^000000]";
 	mes "I can change your appearance.";
 	if( .cost_size ){
 		mes " ";
@@ -166,12 +166,12 @@ OnInit:
 
 
 // NPC Lists
-aldebaran,184,171,5	script	Adv. Stylist#main	878,{
+aldebaran,184,171,5	script	Shear Genius#main	878,{
 	doevent "Stylist::OnTalk";
 }
 
-aldebaran,184,171,5	duplicate(Adv. Stylist#main)	Adv. Stylist#1	878
-// aldebaran,184,171,5	duplicate(Adv. Stylist#main)	Adv. Stylist#2	878
-// aldebaran,184,171,5	duplicate(Adv. Stylist#main)	Adv. Stylist#3	878
+aldebaran,184,171,5	duplicate(Shear Genius#main)	Adv. Stylist#1	878
+// aldebaran,184,171,5	duplicate(Shear Genius#main)	Adv. Stylist#2	878
+// aldebaran,184,171,5	duplicate(Shear Genius#main)	Adv. Stylist#3	878
 
 

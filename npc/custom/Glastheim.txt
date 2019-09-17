@@ -3,7 +3,7 @@
 // Changelog: 
 // 1.0 - Original versions
 
-gef_fild06,23,299,4	script	Minotaur	1149,{
+gef_fild06,23,299,4	script	Minotaur#Dyrval	1149,{
 	mes "[Minotaur]";
 	mes "Little pink thing.";
 	mes "Me Dyrval.";
@@ -14,7 +14,7 @@ gef_fild06,23,299,4	script	Minotaur	1149,{
 	close;
 }
 
-gef_fild06,23,308,4	script	Minotaur	1149,{
+gef_fild06,23,308,4	script	Minotaur#Dubin	1149,{
 	mes "[Minotaur]";
 	mes "Me Dubin.";
 	next;
@@ -23,7 +23,7 @@ gef_fild06,23,308,4	script	Minotaur	1149,{
 	close;
 }
 
-glast_01,373,299,4	script	Minotaur	1149,{
+glast_01,373,299,4	script	Minotaur#Mortyn	1149,{
 	mes "[Minotaur]";
 	mes "Me am Mortyn.";
 	next;
