@@ -5794,3 +5794,21 @@
 2046,Magic Decoy Wind@AL_HEAL,chase,28,10,10000,0,1000,no,self,myhpltmaxrate,99,,,,,,,
 2046,Magic Decoy Wind@AL_HEAL,idle,28,10,10000,0,1000,no,self,myhpltmaxrate,99,,,,,,,
 2046,Magic Decoy Wind@AL_HEAL,attack,28,10,10000,0,1000,no,self,myhpltmaxrate,99,,,,,,,
+
+21001,Zombie@NPC_POISON,attack,176,1,500,800,5000,no,target,always,0,,,,,,,
+21001,Zombie@NPC_POISON,angry,176,1,500,800,5000,no,target,always,0,,,,,,,
+21001,Zombie@NPC_UNDEADATTACK,attack,347,1,2000,0,5000,yes,target,always,0,,,,,,,
+21001,Zombie@NPC_UNDEADATTACK,angry,347,1,2000,0,5000,yes,target,always,0,,,,,,,
+
+21002,Ghoul@NPC_POISON,attack,176,3,500,800,5000,no,target,always,0,,,,,,,
+21002,Ghoul@NPC_POISON,angry,176,3,500,800,5000,no,target,always,0,,,,,,,
+
+21003,Zombie Master@AL_TELEPORT,idle,26,1,10000,0,0,yes,self,rudeattacked,,,,,,,,
+21003,Zombie Master@KN_BRANDISHSPEAR,attack,57,5,500,1000,5000,no,target,always,0,,,,,,,
+21003,Zombie Master@NPC_POISON,attack,176,3,500,800,5000,no,target,always,0,,,,,,,
+21003,Zombie Master@NPC_SUMMONSLAVE,idle,196,2,10000,2000,60000,no,self,slavele,0,21002,,,,,,
+
+21004,Zombie@NPC_UNDEADATTACK,chase,347,3,5000,0,5000,no,target,always,0,,,,,,,
+21004,Zombie@AL_HEAL,idle,28,1,5000,1000,3000,no,self,always,0,,,,,,26,
+21004,Zombie@NPC_UNDEADATTACK,attack,347,3,5000,500,3000,no,target,always,0,,,,,,28,
+21004,Zombie@NPC_BLOODDRAIN,attack,199,1,5000,500,5000,no,target,always,0,,,,,,47,
