@@ -259,11 +259,11 @@ IG_Accesory,2603,12	// Necklace
 IG_Accesory,2604,12	// Glove
 IG_Accesory,2605,12	// Brooch
 IG_Accesory,2607,12	// Clip
-IG_Accesory,2608,14	// Rosary
-IG_Accesory,2609,14	// Skull Ring
-IG_Accesory,2610,14	// Gold Ring
-IG_Accesory,2611,14	// Silver Ring
-IG_Accesory,2612,14	// Flower Ring
+//IG_Accesory,2608,14	// Rosary
+//IG_Accesory,2609,14	// Skull Ring
+//IG_Accesory,2610,14	// Gold Ring
+//IG_Accesory,2611,14	// Silver Ring
+//IG_Accesory,2612,14	// Flower Ring
 IG_Accesory,2613,11	// Diamond Ring
 IG_Accesory,2615,1	// Safety Ring
 IG_Accesory,2616,1	// Critical Ring
@@ -275,10 +275,10 @@ IG_Accesory,2622,1	// Earring
 IG_Accesory,2623,10	// Necklace
 IG_Accesory,2624,1	// Glove
 IG_Accesory,2625,1	// Brooch
-IG_Accesory,2626,1	// Rosary
+//IG_Accesory,2626,1	// Rosary
 IG_Accesory,2627,10	// Belt
-IG_Accesory,2628,14	// Novice Armlet
-IG_Accesory,2654,1	// Shinobi Sash
+//IG_Accesory,2628,14	// Novice Armlet
+//IG_Accesory,2654,1	// Shinobi Sash
 IG_Accesory,2656,1	// Armor Charm
 IG_Accesory,2658,10	// Nile Rose
 IG_Accesory,2659,2	// Vesper Core 01
@@ -288,13 +288,16 @@ IG_Accesory,2662,2	// Vesper Core 04
 IG_Accesory,2671,1	// Bow Thimble
 IG_Accesory,2677,1	// Spiritual Ring
 IG_Accesory,2680,9	// Ring of Minor Spirits
-IG_Accesory,2700,2	// Red Silk of Seal
+//IG_Accesory,2700,2	// Red Silk of Seal
 IG_Accesory,2701,1	// Glove of Orleans
 IG_Accesory,2703,1	// Expert Ring
 IG_Accesory,2716,1	// Librarian Glove
 IG_Accesory,2717,1	// Pocket Watch
 IG_Accesory,2718,1	// Lunatic Brooch
 IG_Accesory,2719,1	// Iron Wrist
+IG_Accesory,2790,1 //Bradium Ring
+IG_Accesory,2788,1 //Bradium Earring
+IG_Accesory,2789,1 //Bradium ring
 // jewels
 IG_Jewel,715,100	// Yellow_Gemstone
 IG_Jewel,716,100	// Red_Gemstone

@@ -6618,3 +6618,4 @@
 30023,StarGladiators_JudoGi,Star Gladiator's Judo Gi,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 4047; },{changebase Class; }
 30024,SoulLinkers_Drape,Soul Linker's Drape,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 4049; },{changebase Class; }
 30025,SoulLinkers_Drape,Soul Linker's Drape,4,1,0,1,0,0,,,0xFFFFFFFF,7,2,16,,1,0,0,{},{ changebase 4049; },{changebase Class; }
+30026,Hel_Shard, Shard of Hel,3,0,,10,,,,,,,,,,,,,{},{},{}
