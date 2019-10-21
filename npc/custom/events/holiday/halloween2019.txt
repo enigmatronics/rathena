@@ -1,38 +1,27 @@
 //==== 1 South Al De Baran ========================
-mjolnir_12,0,0	monster	Zombie	21001,10
-mjolnir_12,0,0	monster	Zombie	21001,10
-mjolnir_12,0,0	monster	Zombie	21001,10
+mjolnir_12,0,0	monster	Zombie	21001,40
 
-mjolnir_12,0,0	monster	Zombie	21002,5
-mjolnir_12,0,0	monster	Zombie	21002,5
-mjolnir_12,0,0	monster	Zombie	21002,5
+mjolnir_12,0,0	monster	Zombie	21002,25
 
-mjolnir_12,0,0	monster	Zombie	21003,5
+mjolnir_12,0,0	monster	Zombie	21003,7
 
 mjolnir_12,0,0	monster	Zombie	21004,2
 
 //==== 1 north Al De Baran ========================
-yuno_fild01,0,0	monster	Zombie	21001,10
-yuno_fild01,0,0	monster	Zombie	21001,10
-yuno_fild01,0,0	monster	Zombie	21001,10
+yuno_fild01,0,0	monster	Zombie	21001,40
 
-yuno_fild01,0,0	monster	Zombie	21002,5
-yuno_fild01,0,0	monster	Zombie	21002,5
-yuno_fild01,0,0	monster	Zombie	21002,5
 
-yuno_fild01,0,0	monster	Zombie	21003,5
+yuno_fild01,0,0	monster	Zombie	21002,25
+
+yuno_fild01,0,0	monster	Zombie	21003,7
 
 yuno_fild01,0,0	monster	Zombie	21004,2
 
 //==== 1 northeast Al De Baran ========================
-yuno_fild12,0,0	monster	Zombie	21001,10
-yuno_fild12,0,0	monster	Zombie	21001,10
-yuno_fild12,0,0	monster	Zombie	21001,10
+yuno_fild12,0,0	monster	Zombie	21001,40
 
-yuno_fild12,0,0	monster	Zombie	21002,5
-yuno_fild12,0,0	monster	Zombie	21002,5
-yuno_fild12,0,0	monster	Zombie	21002,5
+yuno_fild12,0,0	monster	Zombie	21002,25
 
-yuno_fild12,0,0	monster	Zombie	21003,5
+yuno_fild12,0,0	monster	Zombie	21003,7
 
 yuno_fild12,0,0	monster	Zombie	21004,2
